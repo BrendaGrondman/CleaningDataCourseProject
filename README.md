@@ -17,7 +17,7 @@ run_analysis.R
 
 Result from run_analysis.R is the following tidy Dataset: 
 
-HumanActivityRecoqnitionTidy.txt
+HumanActivityRecoqnitionTidy.txt.txt
 
 
 Codebook of the tidy dataset:
@@ -25,7 +25,7 @@ Codebook of the tidy dataset:
 CodeBook.md
 
 	
-In R you can use this following comment to read the file HumanActivityRecoqnitionTidy.txt from your working directory.
+In R you can use this following comment to read the file HumanActivityRecoqnitionTidy.txt.txt from your working directory.
 
-Dataset<-read.table("HumanActivityRecoqnitionTidy.txt", header=TRUE)
+Dataset<-read.table("HumanActivityRecoqnitionTidy.txt.txt", header=TRUE)
 
