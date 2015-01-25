@@ -50,5 +50,5 @@ names(data) <- gsub("fGravityAcc","FrequencyGravityAcceleration", names(data))
 names(data) <- gsub("fBodyGyro","FrequencyBodyGyro", names(data))
 #Make and write tiny dataset
 Tiny<-data %>% group_by(Subject, Activity) %>% summarise_each(funs(mean))
-write.table(Tiny, "HumanActivityRecoqnitionTidy.txt", row.name=FALSE)
-HumanActivityRecoqnitionTidy<-read.table("HumanActivityRecoqnitionTidy.txt", header=TRUE)
+write.table(Tiny, "HumanActivityRecoqnitionTidy.txt.txt", row.name=FALSE)
+HumanActivityRecoqnitionTidy<-read.table("HumanActivityRecoqnitionTidy.txt.txt", header=TRUE)
