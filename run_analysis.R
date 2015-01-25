@@ -25,19 +25,19 @@ data <-rbind(train,test)
 #We are going to use the function merge. This rank will help us to sort the data again. 
 data<-cbind(c(1:nrow(data)),data)
 #Colnames
-colnamesdata<-c('Rank', 'Subject', 'Activity', features)
+colnamesdata<-c('Rank', 'Subject', 'activity', features)
 #Select columnnames with mean and std, and the Rank, Subject and Activity
 subset<-sort(c(grep("meanbb", colnamesdata),grep('Meanbb', colnamesdata),grep('stdbb', colnamesdata)))  
 data<-data[,c(1:3,subset)]
-colnamesdata<-c('Rank', 'Subject', 'Activity',colnamesdata[subset])
+colnamesdata<-c('Rank', 'Subject', 'activity',colnamesdata[subset])
 #Range the bb that we used to find mean and std for ""
 colnamesdata <- gsub("bb", "", colnamesdata, fixed=TRUE)
 #Assign final columnnames to data
 colnames(data)<-colnamesdata
 #Replace activity codes by wording and do a reorder
 data <- merge(data,activity_labels, all.x=TRUE)
-data <- arrange(data,rank)
-data <- cbind(data[,3],data,70],data[,4:69])
+data <- arrange(data,Rank)
+data <- cbind(data[,3],data[,70],data[,4:69])
 #Make more descriptive colnames
 colnames(data)[1] <- "Subject"
 colnames(data)[2] <- "Activity"
